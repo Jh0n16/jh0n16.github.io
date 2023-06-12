@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+    <title>Calculadora</title>
+</head>
+<body>
+    <main id="calculadora">
+        <div id="resultado"> <!-- Exibe os resultados das operações -->
+            <p data-op-anterior id="opAnterior"></p>
+            <p data-op-atual id="opAtual">0</p>
+
+        </div>
+
+        <div id="botoes"> <!-- Teclado da calculadora -->
+            <button data-limpa class="botao double">C</button>
+            <button data-excluir class="botao operacao">&larr;</button>
+            <button data-op class="botao operacao">&div;</button>
+            <button data-num class="botao">7</button>
+            <button data-num class="botao">8</button>
+            <button data-num class="botao">9</button>
+            <button data-op class="botao operacao">&Cross;</button>
+            <button data-num class="botao">4</button>
+            <button data-num class="botao">5</button>
+            <button data-num class="botao">6</button>
+            <button data-op class="botao operacao">&minus;</button>
+            <button data-num class="botao">1</button>
+            <button data-num class="botao">2</button>
+            <button data-num class="botao">3</button>
+            <button data-op class="botao operacao">&plus;</button>
+            <button data-num class="botao double">0</button>
+            <button data-num class="botao">.</button>
+            <button data-resultado class="botao operacao">&equals;</button>
+
+        </div>
+    </main>
+
+    <footer><a href="https://github.com/Jh0n16">&copy; Jh0n16</a></footer>
+</body>
+</html>
