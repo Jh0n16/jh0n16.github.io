@@ -1,0 +1,177 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: #480072;
+    background: linear-gradient(
+        90deg,
+        #000 0%,
+        #480072 50%,
+        #7c01c4 100%
+    );
+}
+
+/*
+    ##############################################
+    #                 CONTAINER                  #
+    ##############################################
+    
+ */
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}  
+
+/*
+    ##############################################
+    #                   CELULA                   #
+    ##############################################
+
+ */
+.celula {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.celula:nth-child(1), /* :nth-child(N) -> seleciona respectivamente o filho de n° N de um elemento */
+.celula:nth-child(2),
+.celula:nth-child(3){
+    border-top: none;
+}
+
+.celula:nth-child(1),
+.celula:nth-child(4),
+.celula:nth-child(7){
+    border-left: none;
+}
+
+.celula:nth-child(7),
+.celula:nth-child(8),
+.celula:nth-child(9){
+    border-bottom: none;
+}
+
+.celula:nth-child(3),
+.celula:nth-child(6),
+.celula:nth-child(9){
+    border-right: none;
+}
+
+.celula.x,
+.celula.o {
+    cursor: not-allowed;
+}
+
+.container.x .celula:not(.x):not(.o):hover::before,
+.container.x .celula:not(.x):not(.o):hover::after,
+.container.o .celula:not(.x):not(.o):hover::before,
+.container.o .celula:not(.x):not(.o):hover::after {
+    background: rgba(255, 255, 255, 0.3) !important /* !important -> define uma 'prioridade' para uma configuração */;
+}
+
+/*
+    ##############################################
+    #                     X                      #
+    ##############################################
+    
+ */
+.celula.x::before, 
+.celula.x::after,
+.container.x .celula:not(.x):not(.o):hover::before,
+.container.x .celula:not(.x):not(.o):hover::after {
+    content: "";
+    height: calc(100px * 0.15);
+    width: calc(100px * 0.8);
+    background-color: #fff;
+    position: absolute;
+}
+
+.celula.x::before,
+.container.x .celula:not(.x):not(.o):before {
+    rotate: 45deg;
+}
+
+.celula.x::after,
+.container.x .celula:not(.x):not(.o):hover::after {
+    rotate: -45deg;
+}
+
+/*
+    ##############################################
+    #                     O                      #
+    ##############################################
+    
+ */
+.celula.o::before, 
+.celula.o::after,
+.container.o .celula:not(.x):not(.o):hover::before,
+.container.o .celula:not(.x):not(.o):hover::after {
+    content: "";
+    height: calc(100px * 0.8);
+    width: calc(100px * 0.8);
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+/*
+    ##############################################
+    #                  MENSAGEM                  #
+    ##############################################
+    
+ */
+.mensagem {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000c5;
+    flex-direction: column;
+
+}
+
+.mensagem button {
+    font-size: 2.5rem;
+    background-color: #9002e2;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.mensagem p {
+    color: #fff;
+    font-size: 5rem;
+    margin: 10px;
+}
+
+.mensagem button:hover {
+    background-color: #aa3beb;
+}
+
+.gameOver {
+    display: flex !important;
+}
