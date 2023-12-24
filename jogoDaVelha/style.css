@@ -175,3 +175,18 @@ body {
 .gameOver {
     display: flex !important;
 }
+
+footer {
+    margin: 0 auto;
+}
+
+footer > a {
+    color: #F5F5F5;
+    font-size: 2.5em;
+    text-decoration: none;
+
+}
+
+footer > a:hover {
+    color: #b4b4b4;
+}
