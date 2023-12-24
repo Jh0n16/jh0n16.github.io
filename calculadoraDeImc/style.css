@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(135deg, #000, #4b0275, #63009c, #000) no-repeat;
+    height: 650px;
+    text-align: center;
+
+}
+
+#container {
+    background-color: #222222;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    border-radius: 50px 0;
+}
+
+header {
+    color: #F5F5F5;
+    font-size: 1.3em;
+    border-bottom: 4px solid #F5F5F5;
+    
+}
+
+#conteudo {
+    color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between; /* Para distribuir os itens uniformemente ao longo do eixo principal */
+
+}
+
+.inputText {
+    box-sizing: content-box;
+    padding: 10px;
+    margin: 10px;
+    flex: 1;
+}
+
+.inputText input {
+    padding: 15px;
+}
+
+#btnCalcular {
+    align-self: center;
+    width: 115px;
+    height: 35px;
+    color: #222222;
+    background-color: #F5F5F5;
+    border: none;
+
+}
+
+#btnCalcular:hover {
+    cursor: pointer;
+    background-color: #dad1d1;
+}
+
+
+#resultado {
+    background-color: #F5F5F5;
+    color: #222222;
+    width: 400px;
+    height: 150px;
+    margin: 10px;
+}
+
+footer {
+    margin: 5px auto;
+}
+
+footer > a {
+    color: #F5F5F5;
+    font-size: 2.5em;
+    text-decoration: none;
+
+}
+
+footer > a:hover {
+    color: #b4b4b4;
+}
