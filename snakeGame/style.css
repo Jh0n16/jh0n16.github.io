@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,500&display=swap'); /* Importando fonte estilizada */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+
+}
+
+body {
+    color: #f1f1f1;
+    background: linear-gradient(120deg, #000, #4b0275, #63009c, #000 ) no-repeat;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+canvas {
+    background-color: #252525;
+
+}
+
+.score {
+    display: flex;
+    font-size: 1.8em;
+    align-self: center;
+    gap: 5px; /* Espa */
+
+}
+
+#menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000c5;
+}
+
+.menuGameOver {
+    display: flex !important;
+}
+
+#gameOver {
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.finalScore {
+    display: flex;
+    font-weight: 600;
+    font-size: 1.8em;
+    gap: 5px;
+    margin: 25px;
+}
+
+#playAgain {
+    border-radius: 10px;
+    font-size: 1.3em;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+footer {
+    margin: 5px auto;
+}
+
+footer > a {
+    color: #F5F5F5;
+    font-size: 2.5em;
+    text-decoration: none;
+
+}
+
+footer > a:hover {
+    color: #b4b4b4;
+}
